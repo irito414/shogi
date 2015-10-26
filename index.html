@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test_js</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="test.css">
+</head>
+<body>
+	<table border="1">
+	<tr>
+		<td id="num1">金</td>
+		<td id="num2">銀</td>
+		<td id="num3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="num4">&nbsp;</td>
+		<td id="num5">&nbsp;</td>
+		<td id="num6">&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="num7">&nbsp;</td>
+		<td id="num8">&nbsp;</td>
+		<td id="num9">&nbsp;</td>
+	</tr>
+	<script>
+		var flag = true;
+		document.getElementById('num1').addEventListener('click', function(){
+			if(flag){
+				console.log("click");
+				flag = false;
+			}else{
+				console.log("eeeee");
+				flag = true;
+			}
+		});
+	</script>
+</body>
+</html>
