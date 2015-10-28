@@ -4,35 +4,44 @@
 	<title>test_js</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="test.css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 <body>
 	<table border="1">
 	<tr>
-		<td id="num1">金</td>
-		<td id="num2">銀</td>
-		<td id="num3">&nbsp;</td>
+		<td id="num1" onclick="change(document.getElementById('num1'))">金</td>
+		<td id="num2" onclick="change(document.getElementById('num2'))">銀</td>
+		<td id="num3" onclick="change(document.getElementById('num3'))">&nbsp;</td>
 	</tr>
 	<tr>
-		<td id="num4">&nbsp;</td>
-		<td id="num5">&nbsp;</td>
-		<td id="num6">&nbsp;</td>
+		<td id="num4" onclick="change(document.getElementById('num4'))">&nbsp;</td>
+		<td id="num5" onclick="change(document.getElementById('num5'))">&nbsp;</td>
+		<td id="num6" onclick="change(document.getElementById('num6'))">&nbsp;</td>
 	</tr>
 	<tr>
-		<td id="num7">&nbsp;</td>
-		<td id="num8">&nbsp;</td>
-		<td id="num9">&nbsp;</td>
+		<td id="num7" onclick="change(document.getElementById('num7'))">&nbsp;</td>
+		<td id="num8" onclick="change(document.getElementById('num8'))">&nbsp;</td>
+		<td id="num9" onclick="change(document.getElementById('num9'))">&nbsp;</td>
 	</tr>
 	<script>
-		var flag = true;
-		document.getElementById('num1').addEventListener('click', function(){
-			if(flag){
-				console.log("click");
-				flag = false;
-			}else{
-				console.log("eeeee");
-				flag = true;
-			}
-		});
+	var flag = false;
+	var str;
+	var tmpobj;
+	function change(obj){
+		if(flag){
+			obj.innerText = str;
+			tmpobj.innerText = " ";
+			console.log("false");
+			flag = false;
+		}else{
+			str = obj.innerText;
+			tmpobj = obj;
+			console.log("true");
+			flag = true;
+		}
+	}	
+	
+		
 	</script>
 </body>
 </html>
