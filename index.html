@@ -7,6 +7,7 @@
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 <body>
+
 	<table border="1">
 	<tr>
 		<td id="num1-1" onclick="change(document.getElementById('num1-1'))">&nbsp;</td>
@@ -74,32 +75,7 @@
 		<td id="num6-8" onclick="change(document.getElementById('num6-8'))">&nbsp;</td>
 		<td id="num6-9" onclick="change(document.getElementById('num6-9'))">&nbsp;</td>
 	</tr>
-	<script>
-	var flag = false;
-	var str;
-	var tmpobj;
-	function change(obj){
-		if(flag){
-			tmpobj.innerText = " ";
-			obj.innerText = str;
-			$(tmpobj).removeClass('active_choice');
-			//$(tmpobj).css('background','white');
-			console.log("false");
-			var row = obj.parentNode.rowIndex + 1;
-			var cell = obj.cellIndex + 1;
-			console.log(row + "-" + cell);
-			$(obj).addClass('spla_A');
-			flag = false;
-		}else{
-			str = obj.innerText;
-			tmpobj = obj;
-			console.log("true");
-			$(obj).addClass('active_choice');
-			flag = true;
-		}
-	}	
-	
-		
-	</script>
+	</table>
+	<script src="position.js"></script>
 </body>
 </html>
